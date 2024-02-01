@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  .left-side {
+    width: 30%;
+    height: 100%;
+    background-color: #282828;
+
+    .header-side {
+      padding: 5px;
+      width: 100%;
+      height: 70px;
+      border-top: 1px solid #6d6d6d;
+      border-bottom: 1px solid #6d6d6d;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      input {
+        padding-left: 20px;
+        width: 70%;
+        height: 80%;
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.85);
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .add-btn {
+        width: 45px;
+        height: 45px;
+        background-color: grey;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .body-side {
+      width: 100%;
+      height: calc(100% - 70px);
+      color: white;
+      overflow: auto;
+
+      .user {
+        padding-left: 20px;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        position: relative;
+        transition: .4s;
+        cursor: pointer;
+        overflow: hidden;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .image {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+          background-color: #d09a35;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 30px;
+          text-transform: uppercase;
+
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .text {
+          margin-left: 20px;
+
+          .name {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 14px;
+          }
+
+          .number {
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 4px;
+          }
+        }
+
+        .del-icon-show {
+          position: absolute;
+          right: 15px;
+          top: 16px;
+          transition: 0.6s;
+          img{
+            width: 30px;
+          }
+        }
+        .del-icon-hide {
+          position: absolute;
+          right: -30px;
+          top: 16px;
+          transition: 0.6s;
+          img{
+            width: 30px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .right-side {
+    width: 70%;
+    height: 100%;
+    background-image: url("./bg-image/aaa.jpg");
+    background-size: cover;
+
+    .header {
+      padding-left: 20px;
+      width: 100%;
+      height: 70px;
+      background-color: #282828;
+      border-left: 1px solid grey;
+      display: flex;
+      align-items: center;
+      color: white;
+      .image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .text {
+        margin-left: 20px;
+
+        .name {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 14px;
+        }
+
+        .number {
+          font-size: 16px;
+          font-weight: normal;
+        }
+      }
+    }
+
+    .body {
+      width: 100%;
+      height: calc(100vh - 150px);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 20px;
+      .message{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 8px;
+        position: relative;
+        .text{
+          padding: 10px;
+          border-radius: 100px;
+          width: max-content;
+          background-color: #f1f1f1;
+          font-size: 14px;
+          cursor: pointer;
+          .del-message{
+            position: absolute;
+            left: 82%;
+            color: white;
+            cursor: pointer;
+            img{
+              width: 20px;
+            }
+          }
+          .edit-message{
+            bottom: 3px;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 79%;
+            color: orange;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .footer {
+      width: 90%;
+      height: 70px;
+      background-color: #282828;
+      margin: 0 auto;
+      border-radius: 20px;
+      .footer-input{
+        padding: 5px;
+        width: 100%;
+        height: 70px;
+        border-top: 1px solid #6d6d6d;
+        border-bottom: 1px solid #6d6d6d;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        input{
+          padding-left: 20px;
+          width: 90%;
+          height: 80%;
+          border: none;
+          border-radius: 10px;
+          background-color: rgba(255, 255, 255, 0.85);
+        }
+        img{
+          width: 35px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+}
